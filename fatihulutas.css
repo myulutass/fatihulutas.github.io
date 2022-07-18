@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Playfair+Display&display=swap');
 
 
- /* Custom properties/variables  */
 
 :root {
     --main-white: #f0f0f0;
@@ -13,13 +12,12 @@
     --main-silver: silver;
   }
   
-  /* Base reset */
+ 
   * {
     margin: 0;
     padding: 0;
   }
   
-  /* box-sizing and font sizing */
   *,
   *::before,
   *::after {
@@ -28,52 +26,33 @@
   
   html {
     box-sizing: border-box;
-  
-    /* Set font size for easy rem calculations
-     * default document font size = 16px, 1rem = 16px, 100% = 16px
-     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-    */
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
   
-  /* A few media query to set some font sizes at different screen sizes.
-   * This helps automate a bit of responsiveness.
-   * The trick is to use the rem unit for size values, margin and padding.
-   * Because rem is relative to the document font size
-   * when we scale up or down the font size on the document
-   * it will affect all properties using rem units for the values.
-  */
+ 
   
-  /* I am using the em unit for breakpoints
-   * The calculation is the following
-   * screen size divided by browser base font size
-   * As an example: a breakpoint at 980px
-   * 980px / 16px = 61.25em
-  */
-  
-  /* 1200px / 16px = 75em */
+
   @media (max-width: 75em) {
     html {
       font-size: 60%;
     }
   }
   
-  /* 980px / 16px = 61.25em */
+
   @media (max-width: 61.25em) {
     html {
       font-size: 58%;
     }
   }
   
-  /* 460px / 16px = 28.75em */
+
   @media (max-width: 28.75em) {
     html {
       font-size: 55%;
     }
   }
   
-  /* Base styles */
   
   body {
     font-size: 1.8rem; /* 18px */
@@ -110,7 +89,6 @@
     width: 100%;
   }
   
-  /* nav */
   
   .nav {
     display: flex;
@@ -172,7 +150,7 @@
    }
   
   .welcome-section > p {
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 200;
     color: black;
     width: 75%;
@@ -193,7 +171,7 @@
     }
   
   .projects-section-header {
-    max-width: 640px;
+    max-width: 40rem;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid;
     color: black;
@@ -208,13 +186,12 @@
   }
 
 
-  /* "Automagic" image grid using no media queries */
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 4rem;
     width: 90%;
-    max-width: 1280px;
+    max-width: 80rem;
     margin: 0 auto;
     margin-bottom: 6rem;
   }
@@ -233,8 +210,8 @@
   
   .project {
     background: var(--main-gray);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    box-shadow: 0.063rem 0.063rem 0.125rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.125rem;
   }
  
   
@@ -255,14 +232,14 @@
   }
   
   .project-title {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 2rem 0.5rem;
   }
   
   .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    border-radius: 2px;
+    border-radius: 0.125rem;
   }
   
   .btn-show-all {
@@ -296,7 +273,7 @@
   }
 
   #baslık {
-    font-size: 30px;
+    font-size: 1,875rem;
     display: block;
     color: #1f1f1f;
     margin-left: 5%;
@@ -315,19 +292,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   grid-template-rows: auto;
-  grid-row-gap: 50px;
+  grid-row-gap: 3.125rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 1280px;
+  max-width: 80rem;
   justify-items: center;
 }
  .skills > img {
-   width: 190px;
-   height: 190px;
+   width: 11.875rem;
+   height:11.875rem;
  
  }
  .skills > p {
-   font-size: 16px;
+   font-size: 1rem;
    color: #1f1f1f;
    font-weight: bolder;
  }
@@ -371,7 +348,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 980px;
+    max-width: 61.25rem;
     margin-top: 4rem;
     flex-wrap: wrap;
   }
